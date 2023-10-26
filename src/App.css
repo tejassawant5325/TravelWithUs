@@ -1,38 +1,156 @@
-.App {
+@import url('https://fonts.googleapis.com/css2?family=Courgette&family=Nunito&family=Work+Sans&display=swap');
+
+/* navbar css */
+.nav {
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16);
+  background-color: #F8F5F1;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.nav span {
+  color: #FF1E00;
+}
+
+.brand-name {
+  font-family: 'Courgette', cursive;
+}
+
+.nav-link,
+.search-form,
+.carousel,
+h3 {
+  font-family: 'Work Sans', sans-serif;
+}
+
+.nav-item {
+  border-radius: 5px;
+}
+
+.nav-item:hover {
+  background-color: #d7ffbb;
+}
+
+.search-form input{
+  border: 1.5px solid #29bf12;
+}
+.search-form input:focus{
+  box-shadow: none;
+  border: 1.5px solid #29bf12 !important;
+
+}
+/* carousel */
+.carousel-inner img {
+  width: 100%;
+  height: 590px;
+  object-fit: cover;
+  object-position: 50% 50%;
+}
+
+/* Packages */
+/* Cards */
+.cards {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.card {
+  margin: 0px;
+  width: 20rem;
+  height: 30rem;
+}
+
+.card h6,
+h5,
+h4,
+p {
+  font-family: 'Work Sans', sans-serif;
+}
+
+.card {
+  padding: 10px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.card img {
+  height: 200px;
+}
+
+.card .btn-color {
+  font-family: 'Work Sans', sans-serif;
+  background-color: #29bf12;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+/* Footer Css */
+.footer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  /* flex-wrap: wrap !important; */
+  background-color: #F8F5F1;
+  height: 250px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.footer p:nth-child(1) {
+  font-family: 'Courgette', cursive;
+  font-size: 25px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.footer p:nth-child(2) {
+  font-size: 18px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.footer span:nth-child(1) {
+  color: #FF1E00;
+}
+
+.social-title {
+  font-size: 17px;
+  font-family: 'Work Sans', sans-serif;
+}
+
+.brand-details {
+  flex: 50%;
+}
+
+.brand-icons i {
+  font-size: 22px;
+  transition: .3s;
+}
+
+.contact-us {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  flex-direction: column;
+  flex: 50%;
+  row-gap: 12px;
+  font-family: 'Work Sans', sans-serif;
+  /* background-color: #C3FF99; */
 }
 
-.App-link {
-  color: #61dafb;
+.contact-us input {
+  width: 50%;
+  height: 40px;
+  text-indent: 15px;
+  border-radius: 5px;
+  border: 1.5px solid #29bf12;
+  outline: none;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.button {
+  width: 150px !important;
+  padding: 8px;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: #29bf12;
+  color: #ffffff;
+  border-radius: 8px;
 }

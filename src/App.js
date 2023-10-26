@@ -1,24 +1,38 @@
-import logo from './logo.svg';
+
 import './App.css';
+import './index.css';
+import Data from './Data';
+import Navbar from "./Components/Navbar";
+import Carousel from "./Components/Carousel";
+import Packages from './Components/Packages';
+import Footer from './Components/Footer';
+import { BrowserRouter, Routes,Route } from 'react-router-dom';
 
 function App() {
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Navbar/>
+      <Carousel/>
+      <h3 className='text-center mt-3 package-title'>Our Packages</h3>
+      <div className='cards'>
+      {
+        Data.map((element)=>{
+          return(
+            <Packages name={element.name} imageURL={element.imageURL} package={element.package} price={element.price} description={element.description}/>
+          )
+        })
+      }
+      </div>
+
+
+      
+
+      
+
+      <Footer/>
+    </>
   );
 }
 
